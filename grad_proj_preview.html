@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AiRcruit Live Demo | Youssef Sedrak</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+
+        #backdrop {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 40;
+            transition: all 0.3s ease;
+        }
+
+        .iframe-focused {
+            position: fixed !important;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90vw !important;
+            height: 85vh !important;
+            z-index: 50;
+            margin: 0 !important;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        .iframe-focused iframe {
+            height: calc(85vh - 53px) !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <div id="backdrop" onclick="toggleFocus()"></div>
+
+    <nav class="p-6 border-b border-slate-200 bg-white/80 backdrop-blur-md sticky top-0 z-30">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 text-sm font-bold text-slate-500 hover:text-blue-600">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Portfolio
+            </a>
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-slate-900 text-white flex items-center justify-center font-bold rounded text-xs">YS</div>
+                <span class="text-xs font-black uppercase tracking-widest text-slate-400">Graduation Project Preview</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-6 py-16">
+        <header class="mb-12">
+            <h1 class="text-4xl font-extrabold mb-4">AiRcruit Interface</h1>
+            <p class="text-slate-600 max-w-6xl leading-relaxed">
+                I contributed to the <strong>Backend Development</strong> for this project. As our university did not offer a course on <strong>Django</strong>, the team learned the framework independently to build the core logic. I led the development of the database architecture; to ensure accuracy, I first built the database in <strong>SQL</strong> externally before implementing the equivalent logic within the project using <strong>Python</strong>.
+            </p>
+        </header>
+
+        <div class="mb-8 p-5 bg-amber-50 border-l-4 border-amber-400 rounded-r-xl shadow-sm">
+            <div class="flex items-start gap-3">
+                <i data-lucide="alert-circle" class="w-6 h-6 text-amber-600 mt-0.5"></i>
+                <div>
+                    <h3 class="font-bold text-amber-900 leading-none">Important: Static UI Preview</h3>
+                    <p class="text-sm text-amber-800 leading-relaxed mt-2">
+                        This demo is a <strong>frontend-only visualization</strong>. Certain sections, including profile pages and candidate or company-restricted areas, have been omitted. Because the Django framework and live database are not active in this environment, some pages may not display logically or process data. Form submissions, account registration, and authentication flows are currently non-functional and serve only as a design preview.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div id="demoContainer" class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-2xl transition-all duration-300 relative">
+            <div class="w-full bg-blue-50 border-b border-blue-200 p-2 flex items-center justify-center gap-2 cursor-pointer hover:bg-blue-100 transition-colors" onclick="toggleFocus()">
+                <i data-lucide="maximize" id="focusIcon" class="w-4 h-4 text-blue-600"></i>
+                <span id="btnText" class="text-sm font-medium text-blue-700">Theater Mode</span>
+            </div>
+
+            <div class="bg-slate-100 border-b border-slate-200 p-3 flex items-center gap-4">
+                <div class="flex gap-1.5">
+                    <div class="w-3 h-3 rounded-full bg-red-400 shadow-inner"></div>
+                    <div class="w-3 h-3 rounded-full bg-amber-400 shadow-inner"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-400 shadow-inner"></div>
+                </div>
+                <div class="flex-1 bg-white border border-slate-200 rounded px-3 py-1 text-[11px] text-slate-400 flex items-center justify-between font-mono">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="lock" class="w-3 h-3"></i>aircruit.demo/static_preview/
+                    </div>
+                </div>
+            </div>
+
+            <iframe
+                id="demoIframe"
+                src="assets/demo/HomePage.html"
+                class="w-full h-[500px] border-none"
+                title="Django App Preview">
+            </iframe>
+        </div>
+        <section class="mt-16">
+            <h2 class="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-2">
+                <i data-lucide="users" class="w-4 h-4"></i> Credits
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                
+                <a href="https://linkedin.com/in/michaelemad3/" target="_blank" 
+                class="group flex items-start justify-between gap-4 p-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-slate-100 p-2 rounded-lg group-hover:bg-blue-100 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5 text-slate-500 group-hover:text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Michael Emad</h3>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Backend Developer & Phase <b>II</b> Frontend Developer</p>
+                        </div>
+                    </div>
+                    <i data-lucide="external-link" class="w-4 h-4 text-slate-300 group-hover:text-blue-400 transition-colors mt-1"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/vera-nabil-45493b243/" target="_blank" 
+                class="group flex items-start justify-between gap-4 p-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-slate-100 p-2 rounded-lg group-hover:bg-blue-100 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5 text-slate-500 group-hover:text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Vera Nabil</h3>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Business Planner & Schema Visualiser</p>
+                        </div>
+                    </div>
+                    <i data-lucide="external-link" class="w-4 h-4 text-slate-300 group-hover:text-blue-400 transition-colors mt-1"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/george-wafik-711026279/" target="_blank" 
+                class="group flex items-start justify-between gap-4 p-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-slate-100 p-2 rounded-lg group-hover:bg-blue-100 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5 text-slate-500 group-hover:text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">George Wafik</h3>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Project Documentarian & Schema Visualiser</p>
+                        </div>
+                    </div>
+                    <i data-lucide="external-link" class="w-4 h-4 text-slate-300 group-hover:text-blue-400 transition-colors mt-1"></i>
+                </a>
+
+                <a href="https://linkedin.com/in/ahmed-ashraf-911916244/" target="_blank" 
+                class="group flex items-start justify-between gap-4 p-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-md transition-all">
+                    <div class="flex items-start gap-4">
+                        <div class="mt-1 bg-slate-100 p-2 rounded-lg group-hover:bg-blue-100 transition-colors">
+                            <i data-lucide="linkedin" class="w-5 h-5 text-slate-500 group-hover:text-blue-600"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-slate-900 group-hover:text-blue-600 transition-colors">Ahmed Ashraf</h3>
+                            <p class="text-xs text-slate-500 mt-1 leading-relaxed">Phase <b>I</b> Frontend Developer & Business Planner</p>
+                        </div>
+                    </div>
+                    <i data-lucide="external-link" class="w-4 h-4 text-slate-300 group-hover:text-blue-400 transition-colors mt-1"></i>
+                </a>
+
+                <div title="LinkedIn profile currently unavailable" 
+                    class="group flex items-start gap-4 p-4 bg-slate-50 border border-slate-200 rounded-xl cursor-not-allowed opacity-70 select-none overflow-hidden">
+                    <div class="mt-1 bg-slate-100 p-2 rounded-lg pointer-events-none">
+                        <i data-lucide="linkedin" class="w-5 h-5 text-slate-400"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <h3 class="font-bold text-slate-400">Abdelrahman Adel</h3>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">Leader & AI Developer</p>
+                        
+                        <div class="text-[10px] text-slate-400 mt-2 font-medium" scrollamount="3">
+                            LinkedIn profile currently unavailable
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="py-12 bg-slate-50 border-t border-slate-200 text-center">
+        <p class="text-[10px] font-black text-slate-400 tracking-[0.4em] uppercase">© 2025 YOUSSEF SEDRAK | PORTFOLIO</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        function toggleFocus() {
+            const container = document.getElementById('demoContainer');
+            const backdrop = document.getElementById('backdrop');
+            const icon = document.getElementById('focusIcon');
+            const btnText = document.getElementById('btnText');
+            
+            const isFocused = container.classList.contains('iframe-focused');
+
+            if (!isFocused) {
+                container.classList.add('iframe-focused');
+                backdrop.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+                icon.setAttribute('data-lucide', 'minimize');
+                btnText.innerText = "Exit Focus";
+            } else {
+                container.classList.remove('iframe-focused');
+                backdrop.style.display = 'none';
+                document.body.style.overflow = '';
+                icon.setAttribute('data-lucide', 'maximize');
+                btnText.innerText = "Theater Mode";
+            }
+            lucide.createIcons();
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === "Escape") {
+                const container = document.getElementById('demoContainer');
+                if (container.classList.contains('iframe-focused')) toggleFocus();
+            }
+        });
+    </script>
+</body>
+</html>

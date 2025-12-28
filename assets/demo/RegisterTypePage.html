@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1"/>
+        <link rel="stylesheet" href="Bootstrap/Bootstrap.css">
+        <link rel="stylesheet" href="CSS/RegisterTypePage.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        </head>
+    <body>
+        <header class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+            <div class="container-fluid px-3 px-md-4">
+                <div class="d-flex align-items-center gap-2">
+                    <img src="Images/AiRcruitIcon.png" alt="Logo" style="max-height: 40px; height: auto;">
+                    <span class="fw-bold fs-4">AiRcruit</span>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto align-items-center gap-3 gap-md-4">
+                        <li class="nav-item">
+                            <a href="HomePage.html" class="nav-link text-dark fw-semibold">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="PricingPage.html" class="nav-link text-dark fw-semibold">Plans</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="ContactUsPage.html" class="nav-link text-dark fw-semibold">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <article>
+            Join as a Job Seeker or Company
+        </article>
+        <nav>
+            <form action="" id="types">
+                <div class="type" id="seekert">
+                    <div class="card-icon">
+                        <i class="fas fa-user-tie"></i> 
+                    </div>
+                    <input type="radio" id="seeker" name="type" value="job seeker" class="radio" style="display: none;">
+                    <label for="seeker">Job Seeker</label>
+                </div>
+                <div class="type" id="companyt">
+                    <div class="card-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <input type="radio" id="company" name="type" value="company" class="radio" style="display: none;">
+                    <label for="company">Company</label>
+                </div>
+            </form>
+        </nav>
+        
+        <div class="butt">
+            <a href="RegisterCandidatePage.html" id="seekerb" class="typeb" style="display:none;">Join as a Job Seeker</a>
+            <a href="RegisterCompanyPage.html" id="companyb" class="typeb" style="display:none;">Join as a Company</a>
+        </div>
+        
+        <p class="login">Already have an account? <a href="LoginPage.html">Log In</a></p>
+
+        <footer class="text-white bg-dark mt-auto">
+            <div class="container py-4 py-lg-5">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                        <h3 class="fs-6 text-white mb-3">Services</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a class="link-light text-decoration-none" href="#">Find Talent</a></li>
+                            <li class="mb-2"><a class="link-light text-decoration-none" href="#">Browse Jobs</a></li>
+                            <li class="mb-2"><a class="link-light text-decoration-none" href="#">Career Resources</a></li>
+                            <li><a class="link-light text-decoration-none" href="#">Skill Assessment</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                        <h3 class="fs-6 text-white mb-3">About</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a class="link-light text-decoration-none" href="#">Company</a></li>
+                            <li class="mb-2"><a class="link-light text-decoration-none" href="#">Team</a></li>
+                            <li class="mb-2"><a class="link-light text-decoration-none" href="#">Careers</a></li>
+                            <li><a class="link-light text-decoration-none" href="#">Press & Media</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                        <h3 class="fs-6 text-white mb-3">Support</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><a class="link-light text-decoration-none" href="#">Help Center</a></li>
+                            <li class="mb-2"><a class="link-light text-decoration-none" href="#">Contact Us</a></li>
+                            <li class="mb-2"><a class="link-light text-decoration-none" href="#">Privacy Policy</a></li>
+                            <li><a class="link-light text-decoration-none" href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
+                        <div class="fw-bold d-flex align-items-center mb-3">
+                            <img src="Images/AiRcruitIcon.png" alt="AiRcruit Logo" style="height: 30px;" class="me-2">
+                            <span>AiRcruit</span>
+                        </div>
+                        <p class="text-light mb-3" style="font-size: 0.875rem;">
+                            Revolutionizing recruitment with AI-powered matching technology.
+                        </p>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-2">
+                    <p class="mb-3 mb-md-0 text-light" style="font-size: 0.875rem;">Copyright © 2025 AiRcruit. All rights reserved.</p>
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item">
+                            <a href="https://www.facebook.com/" class="link-light" aria-label="Facebook">
+                                <i class="bi bi-facebook fs-5"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item mx-3">
+                            <a href="https://www.x.com/" class="link-light" aria-label="Twitter">
+                                <i class="bi bi-twitter fs-5"></i>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a href="https://www.instagram.com" class="link-light" aria-label="Instagram">
+                                <i class="bi bi-instagram fs-5"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const types = document.querySelectorAll(".type");
+                const seekerRadio = document.getElementById("seeker");
+                const companyRadio = document.getElementById("company");
+                const seekerButton = document.getElementById("seekerb");
+                const companyButton = document.getElementById("companyb");
+
+                seekerButton.style.display = "none";
+                companyButton.style.display = "none";
+
+                types.forEach(type => {
+                    type.addEventListener("click", function () {
+                        const radio = this.querySelector("input[type='radio']");
+                        if (radio) {
+                            radio.checked = true;
+                            updateButtonVisibility();
+                            updateTypeSelection();
+                        }
+                    });
+                });
+
+                function updateButtonVisibility() {
+                    if (seekerRadio.checked) {
+                        seekerButton.style.display = "flex";
+                        companyButton.style.display = "none";
+                    } else if (companyRadio.checked) {
+                        seekerButton.style.display = "none";
+                        companyButton.style.display = "flex";
+                    }
+                }
+
+                function updateTypeSelection() {
+                    types.forEach(type => type.classList.remove("selected"));
+                    const selectedType = document.querySelector("input[type='radio']:checked");
+                    if (selectedType) {
+                        selectedType.closest(".type").classList.add("selected");
+                    }
+                }
+            });
+        </script>
+        <script src="Bootstrap/Bootstrap.js"></script>
+    </body>
+</html>

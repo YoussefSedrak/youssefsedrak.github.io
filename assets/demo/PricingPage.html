@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="description" content="Choose the perfect pricing plan for your recruitment needs with AiRcruit">
+    <title>Pricing Plans | AiRcruit</title>
+    
+    <link rel="stylesheet" href="Bootstrap/Bootstrap.css">
+    <link rel="stylesheet" href="CSS/PricingPage.css">
+    <link rel="stylesheet" href="Bootstrap/Fonts.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <header class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container-fluid px-3 px-md-4">
+            <div class="d-flex align-items-center gap-2">
+                <img src="Images/AiRcruitIcon.png" alt="Logo" style="max-height: 40px; height: auto;">
+                <span class="fw-bold fs-4">AiRcruit</span>
+            </div>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3 gap-md-4">
+                    <li class="nav-item">
+                        <a href="HomePage.html" class="nav-link text-dark fw-semibold">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ContactUsPage.html" class="nav-link text-dark fw-semibold">Contact Us</a>
+                    </li>
+                    <li class="nav-item ms-2 ms-md-3">
+                        <div class="d-flex gap-2">
+                            <a href="LoginPage.html" class="btn btn-outline-primary btn-sm">Login</a>
+                            <a href="RegisterTypePage.html" class="btn btn-primary btn-sm">Sign Up</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow-1">
+        <div class="content-wrapper">
+            <article>Bundles</article>
+            <p class="text-center mb-4 mb-md-5 text-muted" style="max-width: 600px;">Choose the right plan for your recruitment needs</p>
+            
+            <div class="subscriptionbut">
+                <button class="buttons nav-button active" data-bundle-type-main-nav="candidate">Candidate Plans</button>
+                <button class="buttons nav-button" data-bundle-type-main-nav="company">Company Plans</button>
+                <button class="buttons nav-button" data-bundle-type-main-nav="advertisement">Advertisements</button>
+            </div>
+
+            <form action="" method="POST" class="bundle-type-section active" data-bundle-type-main="candidate">
+                <input type="hidden" name="bundle_id" class="hidden-bundle-id">
+                <h2>Candidate Bundles</h2>
+                
+                <div class="bundles-container">
+                    <div class="bundle-card disabled" data-b-id="cand_limited">
+                        <div>
+                            <h3>Limited Bundle</h3>
+                            <p class="price">FREE</p>
+                            <p>Up to 5 Job Offerings</p>
+                            <p>Duration: 6 Months</p>
+                            <p class="type-description">Basic entry for job seekers.</p>
+                            <h4>Features:</h4>
+                            <ul class="type-features">
+                                <li>Renewable Yearly</li>
+                            </ul>
+                            <div class="message">
+                                <i class="bi bi-info-circle"></i> This free tier is automatically assigned to your account and does not require purchase.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bundle-card" data-b-id="cand_premium">
+                        <div>
+                            <h3>Premium Bundle</h3>
+                            <p class="price">250 L.E.</p>
+                            <p>Up to 15 Job Offerings</p>
+                            <p>Duration: 6 Months</p>
+                            <p class="type-description">Enhanced tools for active seekers.</p>
+                            <h4>Features:</h4>
+                            <ul class="type-features">
+                                <li>Advanced Application Tracking</li>
+                                <li>Increased Profile Visibility</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bundle-card" data-b-id="cand_ultimate">
+                        <div>
+                            <h3>Ultimate Bundle</h3>
+                            <p class="price">400 L.E.</p>
+                            <p>Up to 25 Job Offerings</p>
+                            <p>Duration: 6 Months</p>
+                            <p class="type-description">Maximum impact for your career search.</p>
+                            <h4>Features:</h4>
+                            <ul class="type-features">
+                                <li>Priority Application Status</li>
+                                <li>Direct Recruiter Access</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="typeb select-button" style="display: none;">Select This Bundle</button>
+            </form>
+
+            <form action="" method="POST" class="bundle-type-section" data-bundle-type-main="company">
+                <input type="hidden" name="bundle_id" class="hidden-bundle-id">
+                <h2>Company Bundles</h2>
+                
+                <div class="bundles-container">
+                    <div class="bundle-card" data-b-id="comp_basic">
+                        <div>
+                            <h3>Basic Bundle</h3>
+                            <p class="price">2900 L.E.</p>
+                            <p>Up to 12 Job Offerings</p>
+                            <p>Duration: 1 Month</p>
+                            <h4>Features:</h4>
+                            <ul class="type-features">
+                                <li>English Test</li>
+                                <li>CV Review</li>
+                                <li>IQ Tests</li>
+                                <li>Job Related Test</li>
+                                <li>Peer-to-Peer Tests</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bundle-card" data-b-id="comp_pro">
+                        <div>
+                            <h3>Professional Bundle</h3>
+                            <p class="price">5310 L.E.</p>
+                            <p>Up to 20 Job Offerings</p>
+                            <p>Duration: 3 Months</p>
+                            <h4>Features:</h4>
+                            <ul class="type-features">
+                                <li>English Test</li>
+                                <li>CV Review</li>
+                                <li>IQ Tests</li>
+                                <li>Job Related Test</li>
+                                <li>Peer-to-Peer Tests</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bundle-card" data-b-id="comp_enterprise">
+                        <div>
+                            <h3>Enterprise Bundle</h3>
+                            <p class="price">7400 L.E.</p>
+                            <p>Up to 30 Job Offerings</p>
+                            <p>Duration: 6 Months</p>
+                            <h4>Features:</h4>
+                            <ul class="type-features">
+                                <li>English Test</li>
+                                <li>CV Review</li>
+                                <li>IQ Tests</li>
+                                <li>Job Related Test</li>
+                                <li>Peer-to-Peer Tests</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="typeb select-button" style="display: none;">Select This Bundle</button>
+            </form>
+
+            <form action="" method="POST" class="bundle-type-section" data-bundle-type-main="advertisement">
+                <input type="hidden" name="bundle_id" class="hidden-bundle-id">
+                <h2>Advertisement Bundles</h2>
+                
+                <div class="bundles-container">
+                    <div class="bundle-card disabled" data-b-id="one_adv">
+                        <div>
+                            <h3>1 Advertisement</h3>
+                            <p class="price">1000 L.E.</p>
+                            <p>Duration: 3 Days</p>
+                            <div class="message">
+                                <i class="bi bi-info-circle"></i> This bundle cannot be purchased unless you have an active Company Bundle.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bundle-card disabled" data-b-id="three_adv">
+                        <div>
+                            <h3>3 Advertisement</h3>
+                            <p class="price">2700 L.E.</p>
+                            <p>Duration: 7 Days</p>
+                            <div class="message">
+                                <i class="bi bi-info-circle"></i> This bundle cannot be purchased unless you have an active Company Bundle.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bundle-card disabled" data-b-id="five_adv">
+                        <div>
+                            <h3>5 Advertisement</h3>
+                            <p class="price">4000 L.E.</p>
+                            <p>Duration: 14 Days</p>
+                            <div class="message">
+                                <i class="bi bi-info-circle"></i> This bundle cannot be purchased unless you have an active Company Bundle.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="typeb select-button" style="display: none;">Select This Bundle</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="text-white bg-dark mt-auto">
+        <div class="container py-4 py-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                    <h3 class="fs-6 text-white mb-3">Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Find Talent</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Browse Jobs</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Career Resources</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">Skill Assessment</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                    <h3 class="fs-6 text-white mb-3">About</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Company</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Team</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Careers</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">Press & Media</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                    <h3 class="fs-6 text-white mb-3">Support</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Help Center</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Contact Us</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Privacy Policy</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
+                    <div class="fw-bold d-flex align-items-center mb-3">
+                        <img src="Images/AiRcruitIcon.png" alt="AiRcruit Logo" style="height: 30px;" class="me-2">
+                        <span>AiRcruit</span>
+                    </div>
+                    <p class="text-light mb-3" style="font-size: 0.875rem;">
+                        Revolutionizing recruitment with AI-powered matching technology.
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-2">
+                <p class="mb-3 mb-md-0 text-light" style="font-size: 0.875rem;">Copyright © 2025 AiRcruit. All rights reserved.</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/" class="link-light" aria-label="Facebook">
+                            <i class="bi bi-facebook fs-5"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item mx-3">
+                        <a href="https://www.x.com/" class="link-light" aria-label="Twitter">
+                            <i class="bi bi-twitter fs-5"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com" class="link-light" aria-label="Instagram">
+                            <i class="bi bi-instagram fs-5"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-button');
+            const sections = document.querySelectorAll('.bundle-type-section');
+
+            function setupSectionDisplay(buttonToActivate) {
+                navButtons.forEach(btn => btn.classList.remove('active'));
+                buttonToActivate.classList.add('active');
+
+                const selectedMainType = buttonToActivate.getAttribute('data-bundle-type-main-nav');
+
+                sections.forEach(section => {
+                    const sectionMainType = section.getAttribute('data-bundle-type-main');
+                    const selectButton = section.querySelector('.select-button');
+                    const hiddenInput = section.querySelector('.hidden-bundle-id');
+
+                    if (sectionMainType === selectedMainType) {
+                        section.classList.add('active');
+                        section.style.display = 'flex';
+
+                        const hasSelectableCard = Array.from(section.querySelectorAll('.bundle-card'))
+                            .some(card => !card.classList.contains('disabled'));
+
+                        if (selectButton) {
+                            if (!hasSelectableCard) {
+                                selectButton.style.display = 'none';
+                                selectButton.setAttribute('disabled', 'true');
+                                selectButton.classList.remove('active');
+                            } else if (hiddenInput && hiddenInput.value) {
+                                selectButton.classList.add('active');
+                                selectButton.style.display = 'flex';
+                                selectButton.removeAttribute('disabled');
+                            } else {
+                                selectButton.classList.remove('active');
+                                selectButton.style.display = 'none';
+                                selectButton.removeAttribute('disabled');
+                            }
+                        }
+                    } else {
+                        section.classList.remove('active');
+                        section.style.display = 'none';
+                        if (selectButton) {
+                            selectButton.classList.remove('active');
+                            selectButton.style.display = 'none';
+                            selectButton.removeAttribute('disabled');
+                        }
+                    }
+                });
+            }
+
+            navButtons.forEach(button => {
+                button.addEventListener('click', function(event) {
+                    if (this.hasAttribute('disabled') || this.classList.contains('disabled-nav-button')) {
+                        event.preventDefault(); 
+                        return; 
+                    }
+                    setupSectionDisplay(this); 
+                });
+            });
+
+            const urlParams = new URLSearchParams(window.location.search);
+            const typeParam = urlParams.get('type');
+            let buttonToDisplayInitially = null;
+
+            if (typeParam) {
+                buttonToDisplayInitially = document.querySelector(`.nav-button[data-bundle-type-main-nav="${typeParam}"]`);
+            }
+
+            if (!buttonToDisplayInitially) {
+                const availableNavButtons = document.querySelectorAll('.subscriptionbut .nav-button');
+                for (let i = 0; i < availableNavButtons.length; i++) {
+                    const currentNavButton = availableNavButtons[i];
+                    const sectionType = currentNavButton.getAttribute('data-bundle-type-main-nav');
+                    const targetSection = document.querySelector(`.bundle-type-section[data-bundle-type-main="${sectionType}"]`);
+
+                    if (!(currentNavButton.hasAttribute('disabled') || currentNavButton.classList.contains('disabled-nav-button'))) {
+                        if (targetSection) {
+                            const hasSelectableCardInSection = Array.from(targetSection.querySelectorAll('.bundle-card'))
+                                .some(card => !card.classList.contains('disabled'));
+                            if (hasSelectableCardInSection) {
+                                buttonToDisplayInitially = currentNavButton;
+                                break; 
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (!buttonToDisplayInitially) {
+                buttonToDisplayInitially = navButtons[0];
+            }
+
+            if (buttonToDisplayInitially) {
+                setupSectionDisplay(buttonToDisplayInitially);
+            }
+
+            sections.forEach(section => {
+                const bundleCards = section.querySelectorAll('.bundle-card');
+                const sectionSelectButton = section.querySelector('.select-button');
+                const hiddenBundleIdInput = section.querySelector('.hidden-bundle-id');
+
+                bundleCards.forEach(card => {
+                    card.addEventListener('click', function() {
+                        if (this.classList.contains('disabled')) {
+                            return; 
+                        }
+
+                        bundleCards.forEach(c => c.classList.remove('selected'));
+                        this.classList.add('selected');
+
+                        const bundleId = this.getAttribute('data-b-id');
+                        if (hiddenBundleIdInput) {
+                            hiddenBundleIdInput.value = bundleId;
+                        }
+
+                        if (sectionSelectButton) {
+                            sectionSelectButton.classList.add('active');
+                            sectionSelectButton.style.display = 'flex';
+                            sectionSelectButton.removeAttribute('disabled');
+                        }
+                    });
+                });
+            });
+
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const navbarNav = document.getElementById('navbarNav');
+            
+            if (navbarToggler && navbarNav) {
+                navbarToggler.addEventListener('click', function() {
+                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                    this.setAttribute('aria-expanded', !isExpanded);
+                    navbarNav.classList.toggle('show');
+                });
+                
+                document.addEventListener('click', function(event) {
+                    if (!navbarToggler.contains(event.target) && !navbarNav.contains(event.target)) {
+                        navbarToggler.setAttribute('aria-expanded', 'false');
+                        navbarNav.classList.remove('show');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

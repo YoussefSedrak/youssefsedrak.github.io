@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>AiRcruit - Create Account</title>
+    <link rel="stylesheet" href="Bootstrap/Bootstrap.css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .main-content {
+            flex: 1 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 50px 0;
+            background-color: #f8f9fa;
+        }
+
+        .signup-button {
+            text-decoration: none;
+            color: var(--bs-body-color);
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: inline-block;
+        }
+
+        .signup-button:hover {
+            background-color: var(--bs-light);
+            color: var(--bs-primary);
+        }
+
+        footer {
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container-fluid px-3 px-md-4">
+            <div class="d-flex align-items-center gap-2">
+                <img src="Images/AiRcruitIcon.png" alt="Logo" style="max-height: 40px; height: auto;">
+                <span class="fw-bold fs-4">AiRcruit</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3 gap-md-4">
+                    <li class="nav-item"><a href="HomePage.html" class="nav-link text-dark fw-semibold">Home</a></li>
+                    <li class="nav-item"><a href="PricingPage.html" class="nav-link text-dark fw-semibold">Plans</a></li>
+                    <li class="nav-item"><a href="ContactUsPage.html" class="nav-link text-dark fw-semibold">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-sm-12 col-lg-10 col-xl-9 col-xxl-7 bg-white shadow-lg border border-gray-300" style="border-radius: 5px;">
+                    <div class="p-5">
+                        <div class="text-start mb-3">
+                            <a class="signup-button" href="RegisterCandidatePage.html">
+                                &larr; Candidate Signup
+                            </a>
+                        </div>
+                        <div class="text-center">
+                            <h4 class="text-dark mb-4">Create an Account!</h4>
+                        </div>
+                        <form class="user" method="POST" action="/submit-registration/">
+                            <div class="mb-3"><input class="form-control form-control-user" type="text" placeholder="Company Name" name="company_name" required=""></div>
+                            <div class="mb-3"><input class="form-control form-control-user" type="email" id="email" placeholder="Email Address" name="email" required=""></div>
+                            <div class="mb-3"><input class="form-control form-control-user" type="text" id="tax_reg_no" placeholder="Tax Registration Number" name="tax_reg_no" required=""></div>
+                            <div class="mb-3"><input class="form-control form-control-user" type="text" id="phone_no" placeholder="Phone No." name="phone_no" required=""></div>
+                            
+                            <div class="mb-3">
+                                <select class="form-select form-control-user" name="company_country" required>
+                                    <option value="" disabled selected>Select Country</option>
+                                    <option value="US">United States</option>
+                                    <option value="UK">United Kingdom</option>
+                                </select>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <select class="form-select form-control-user" name="industry" required>
+                                    <option value="" disabled selected>Select Industry</option>
+                                    <option value="IT">Technology</option>
+                                    <option value="FIN">Finance</option>
+                                </select>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-sm-6 mb-3 mb-sm-0"><input class="form-control form-control-user" type="password" id="password" placeholder="Password" name="password" required=""></div>
+                                <div class="col-sm-6"><input class="form-control form-control-user" type="password" id="verifyPassword" placeholder="Repeat Password" name="confirm_password" required=""></div>
+                            </div>
+
+                            <div class="mb-3">
+                                <select class="form-select form-control-user" name="recovery_question" required>
+                                    <option value="" disabled selected>Select Recovery Question</option>
+                                    <option value="pet">What was the name of your first pet?</option>
+                                    <option value="city">In what city were you born?</option>
+                                </select>
+                            </div>
+                            <div class="mb-3"><input class="form-control form-control-user" type="text" placeholder="Answer here (Remember it)" name="recovery_question_answer" required></div>
+                            
+                            <div class="row mb-3">
+                                <p id="emailErrorMsg" class="text-danger" style="display:none;"></p>
+                                <p id="passwordErrorMsg" class="text-danger" style="display:none;"></p>
+                                <p id="phoneErrorMsg" class="text-danger" style="display:none;"></p>
+                                <p id="taxRegErrorMsg" class="text-danger" style="display:none;"></p>
+                            </div>
+                            <button class="btn btn-primary d-block btn-user w-100" id="submitBtn" type="submit">Register Account</button>
+                            <hr>
+                        </form>
+                        <div class="text-center"><a class="small" href="LoginPage.html">Already have an account? Login!</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-white bg-dark">
+        <div class="container py-4 py-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                    <h3 class="fs-6 text-white mb-3">Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Find Talent</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Browse Jobs</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Career Resources</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">Skill Assessment</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                    <h3 class="fs-6 text-white mb-3">About</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Company</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Team</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Careers</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">Press & Media</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                    <h3 class="fs-6 text-white mb-3">Support</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Help Center</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Contact Us</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Privacy Policy</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
+                    <div class="fw-bold d-flex align-items-center mb-3">
+                        <img src="Images/AiRcruitIcon.png" alt="AiRcruit Logo" style="height: 30px;" class="me-2">
+                        <span>AiRcruit</span>
+                    </div>
+                    <p class="text-light mb-3" style="font-size: 0.875rem;">
+                        Revolutionizing recruitment with AI-powered matching technology.
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-2">
+                <p class="mb-3 mb-md-0 text-light" style="font-size: 0.875rem;">Copyright © 2025 AiRcruit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Bootstrap/Bootstrap.js"></script>
+    <script>
+        let email = document.getElementById("email")
+        let password = document.getElementById("password")
+        let verifyPassword = document.getElementById("verifyPassword")
+        let phone_no = document.getElementById("phone_no")
+        let tax_reg_no = document.getElementById("tax_reg_no")
+        let submitBtn = document.getElementById("submitBtn")
+        let emailErrorMsg = document.getElementById('emailErrorMsg')
+        let passwordErrorMsg = document.getElementById('passwordErrorMsg')
+        let phoneErrorMsg = document.getElementById('phoneErrorMsg')
+        let taxRegErrorMsg = document.getElementById('taxRegErrorMsg')
+
+        function displayErrorMsg(type, msg) {
+            if(type == "email") {
+                emailErrorMsg.style.display = "block"
+                emailErrorMsg.innerHTML = msg
+                submitBtn.disabled = true
+            }
+            else if(type == "password") {
+                passwordErrorMsg.style.display = "block"
+                passwordErrorMsg.innerHTML = msg
+                submitBtn.disabled = true
+            }
+            else if(type == "phone") {
+                phoneErrorMsg.style.display = "block"
+                phoneErrorMsg.innerHTML = msg
+                submitBtn.disabled = true
+            }
+            else if(type == "taxreg") {
+                taxRegErrorMsg.style.display = "block"
+                taxRegErrorMsg.innerHTML = msg
+                submitBtn.disabled = true
+            }
+        }
+
+        function hideErrorMsg(type) {
+            if(type == "email") {
+                emailErrorMsg.style.display = "none"
+                emailErrorMsg.innerHTML = ""
+                if(passwordErrorMsg.innerHTML == "" && phoneErrorMsg.innerHTML == "" && taxRegErrorMsg.innerHTML == "")
+                    submitBtn.disabled = false
+            }
+            else if(type == "password") {
+                passwordErrorMsg.style.display = "none"
+                passwordErrorMsg.innerHTML = ""
+                if(emailErrorMsg.innerHTML == "" && phoneErrorMsg.innerHTML == "" && taxRegErrorMsg.innerHTML == "")
+                    submitBtn.disabled = false
+            }
+            else if(type == "phone") {
+                phoneErrorMsg.style.display = "none"
+                phoneErrorMsg.innerHTML = ""
+                if(emailErrorMsg.innerHTML == "" && passwordErrorMsg.innerHTML == "" && taxRegErrorMsg.innerHTML == "")
+                    submitBtn.disabled = false
+            }
+            else if(type == "taxreg") {
+                taxRegErrorMsg.style.display = "none"
+                taxRegErrorMsg.innerHTML = ""
+                if(emailErrorMsg.innerHTML == "" && passwordErrorMsg.innerHTML == "" && phoneErrorMsg.innerHTML == "")
+                    submitBtn.disabled = false
+            }
+        }
+        
+        password.addEventListener("change", function() {
+            if(password.value.length == 0 && verifyPassword.value.length == 0) hideErrorMsg("password")
+            else if(password.value !== verifyPassword.value) displayErrorMsg("password", "Passwords do not match")
+            else {
+                if(password.value.length >= 8) hideErrorMsg("password")
+                else displayErrorMsg("password", "Password must be at least 8 characters long")
+            }
+        })
+        
+        verifyPassword.addEventListener("change", function() {
+            if(password.value !== verifyPassword.value) displayErrorMsg("password", "Passwords do not match")
+            else {
+                if(password.value.length >= 8) hideErrorMsg("password")
+                else displayErrorMsg("password", "Password must be at least 8 characters long")
+            }
+        })
+
+        email.addEventListener("change", function() {
+            if(email.value.match(/^[^@]+@[^@]+\.[^@]+$/)) hideErrorMsg("email")
+            else displayErrorMsg("email", "Invalid email")
+        });
+
+        phone_no.addEventListener("change", function() {
+            const phoneDigits = phone_no.value.replace(/\D/g, '');
+            if(phoneDigits.length == 11) hideErrorMsg("phone")
+            else displayErrorMsg("phone", "Phone number must be exactly 11 digits")
+        });
+
+        tax_reg_no.addEventListener("change", function() {
+            const taxDigits = tax_reg_no.value.replace(/\D/g, '');
+            if(taxDigits.length == 12) hideErrorMsg("taxreg")
+            else displayErrorMsg("taxreg", "Tax registration number must be exactly 12 digits")
+        });
+    </script>
+</body>
+</html>

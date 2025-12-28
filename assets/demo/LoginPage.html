@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="Bootstrap/Bootstrap.css">
+    <link rel="stylesheet" href="CSS/LoginPage.css">
+    <link rel="stylesheet" href="Bootstrap/Fonts.css">
+    <title>AiRcruit</title>
+</head>
+
+<body>
+    <header class="navbar navbar-expand-lg bg-white border-bottom sticky-top">
+        <div class="container-fluid px-3 px-md-4">
+            <div class="d-flex align-items-center gap-2">
+                <img src="Images/AiRcruitIcon.png" alt="Logo" style="max-height: 40px; height: auto;">
+                <span class="fw-bold fs-4">AiRcruit</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center gap-3 gap-md-4">
+                    <li class="nav-item">
+                        <a href="HomePage.html" class="nav-link text-dark fw-semibold">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="PricingPage.html" class="nav-link text-dark fw-semibold">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="ContactUsPage.html" class="nav-link text-dark fw-semibold">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container py-4 py-lg-5">
+        <div class="row justify-content-center align-items-center min-vh-75">
+            <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-0">
+                        <div class="row g-0">
+                            <div class="col-lg-6 d-none d-lg-flex align-items-center">
+                                <div class="h-100 w-100 bg-login-image" 
+                                     style="background: url('Images/LoginPage.png') center / cover; min-height: 500px;">
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-6">
+                                <div class="p-4 p-md-5">
+                                    <div class="text-center mb-4">
+                                        <h4 class="text-dark">Welcome back!</h4>
+                                        <p class="text-muted">Please enter your credentials to login</p>
+                                    </div>
+                                    
+                                    <form class="user" method="POST" action="/login-submit/">
+                                        <div class="mb-3">
+                                            <input class="form-control form-control-lg" 
+                                                   type="email" 
+                                                   id="exampleInputEmail" 
+                                                   aria-describedby="emailHelp" 
+                                                   placeholder="Enter Email Address..." 
+                                                   name="email"
+                                                   required>
+                                        </div>
+                                        <div class="mb-4">
+                                            <input class="form-control form-control-lg" 
+                                                   type="password" 
+                                                   id="exampleInputPassword" 
+                                                   placeholder="Password" 
+                                                   name="password"
+                                                   required>
+                                        </div>
+                                        
+                                        <button class="btn btn-primary btn-lg w-100 py-3" 
+                                                type="submit" 
+                                                style="background: var(--bs-primary-text-emphasis);border-color: var(--bs-primary-text-emphasis);">
+                                            Login
+                                        </button>
+                                        
+                                        <hr class="my-4">
+                                    </form>
+                                    
+                                    <div class="text-center">
+                                        <a class="d-block mb-2 text-decoration-none" 
+                                           href="RegisterTypePage.html" 
+                                           style="color: #01703E;">
+                                            Create Account?
+                                        </a>
+                                        <a class="d-block text-decoration-none" 
+                                           href="ForgotPasswordPage.html" 
+                                           style="color: #01703E;">
+                                            Forgot Password?
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="text-white bg-dark mt-auto">
+        <div class="container py-4 py-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                    <h3 class="fs-6 text-white mb-3">Services</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Find Talent</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Browse Jobs</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Career Resources</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">Skill Assessment</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                    <h3 class="fs-6 text-white mb-3">About</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Company</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Team</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Careers</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">Press & Media</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item mb-4 mb-md-0">
+                    <h3 class="fs-6 text-white mb-3">Support</h3>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Help Center</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Contact Us</a></li>
+                        <li class="mb-2"><a class="link-light text-decoration-none" href="#">Privacy Policy</a></li>
+                        <li><a class="link-light text-decoration-none" href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last item social">
+                    <div class="fw-bold d-flex align-items-center mb-3">
+                        <img src="Images/AiRcruitIcon.png" alt="AiRcruit Logo" style="height: 30px;" class="me-2">
+                        <span>AiRcruit</span>
+                    </div>
+                    <p class="text-light mb-3" style="font-size: 0.875rem;">
+                        Revolutionizing recruitment with AI-powered matching technology.
+                    </p>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center pt-2">
+                <p class="mb-3 mb-md-0 text-light" style="font-size: 0.875rem;">Copyright © 2025 AiRcruit. All rights reserved.</p>
+                <ul class="list-inline mb-0">
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/" class="link-light" aria-label="Facebook">
+                            <i class="bi bi-facebook fs-5"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item mx-3">
+                        <a href="https://www.x.com/" class="link-light" aria-label="Twitter">
+                            <i class="bi bi-twitter fs-5"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="https://www.instagram.com" class="link-light" aria-label="Instagram">
+                            <i class="bi bi-instagram fs-5"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="Bootstrap/Bootstrap.js"></script>
+</body>
+</html>
