@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Bikeshare Analysis | Youssef Sedrak</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+    <py-config>
+        packages = ["pandas"]
+        [[fetch]]
+        from = "assets/udacity_projects/bikeshare/"
+        to = "." 
+        files = ["chicago.csv", "new_york_city.csv", "washington.csv", "bikeshare_project.py"]
+    </py-config>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap');
+        
+        body { font-family: 'Inter', sans-serif; }
+
+        /* Modern Terminal Styling */
+        .terminal-container {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            /* Allow height to be flexible on mobile, fixed on desktop */
+            min-height: 400px;
+            height: 100%;
+            overflow: hidden;
+            background-color: #1e293b; /* Darker background for better readability */
+        }
+
+        /* Loading Buffer Overlay */
+        #terminal-loader {
+            position: absolute;
+            inset: 0;
+            background: #1e293b;
+            z-index: 40;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease-out;
+        }
+
+        .loader-bar-container {
+            width: 140px;
+            height: 3px;
+            background: #334155;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+
+        .loader-bar-fill {
+            width: 100%;
+            height: 100%;
+            background: #3b82f6;
+            transform-origin: left;
+            animation: loading-shimmer 2s infinite ease-in-out;
+        }
+
+        @keyframes loading-shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .terminal-header {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 12px 16px;
+            background: #0f172a;
+            border-bottom: 1px solid #334155;
+        }
+        .dot { width: 8px; height: 8px; border-radius: 50%; }
+        .dot-red { background: #ff5f56; }
+        .dot-amber { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+
+        #my-terminal {
+            display: flex !important;
+            flex-direction: column;
+            height: 100% !important;
+            --py-terminal-bg: #1e293b;
+            --py-terminal-color: #f8fafc;
+            font-family: 'Fira Code', monospace !important;
+        }
+
+        #my-terminal pre {
+            padding: 1rem !important;
+            margin: 0 !important;
+            flex-grow: 1;
+            overflow-y: auto;
+            background: transparent !important;
+            
+            /* Responsive Typography */
+            font-size: 11px !important;
+            line-height: 1.5 !important;
+            color: #cbd5e1 !important;
+            
+            /* Crucial for Mobile */
+            white-space: pre-wrap !important; 
+            word-break: break-all !important;
+        }
+
+        @media (min-width: 768px) {
+            #my-terminal pre {
+                font-size: 13px !important;
+                padding: 1.5rem 2rem !important;
+                line-height: 1.7 !important;
+                word-break: normal !important;
+            }
+            .terminal-container { min-height: 600px; }
+        }
+
+        .city-btn.active {
+            border: 2px solid #3b82f6 !important;
+            background-color: #eff6ff !important;
+            color: #1d4ed8 !important;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 py-4">
+        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 text-sm font-bold text-slate-600 hover:text-blue-600 transition-colors">
+                <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Portfolio
+            </a>
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-slate-900 text-white flex items-center justify-center font-bold rounded text-xs">YS</div>
+                <span class="text-xs font-bold uppercase tracking-widest text-slate-400 md:block hidden">Udacity | Professional Track | 1<sup>st</sup> Milestone</span>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-28 pb-12 bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-6">
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tighter text-slate-900 mb-4">US Bikeshare Project</h1>
+            <p class="text-md md:text-lg text-slate-600 max-w-3xl leading-relaxed">This project is a data analysis tool built to extract meaningful travel trends from large-scale bikeshare datasets. 
+                By processing raw records from Chicago, New York, and Washington, the script identifies peak travel times, the most popular routes, and key user demographics. It serves as a decision-making engine 
+                that transforms chaotic trip logs into a clear overview of urban mobility patterns, helping to identify where, when, and by whom the service is used most.</p>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 md:px-6 py-8 md:py-16">
+        <div class="bg-white rounded-2xl md:rounded-3xl border border-slate-200 shadow-sm overflow-hidden grid grid-cols-1 lg:grid-cols-12 lg:h-[700px]">
+            
+            <aside class="lg:col-span-4 bg-slate-50/50 p-6 md:p-8 border-r border-slate-100 flex flex-col gap-6 md:gap-8">
+                <section>
+                    <h3 class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">1. Select City</h3>
+                    <div id="city-selector" class="grid grid-cols-1 gap-2">
+                        <button id="btn-chicago" onclick="setVal('chicago')" class="city-btn active w-full text-left px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm font-semibold transition-all">Chicago</button>
+                        <button id="btn-new-york-city" onclick="setVal('new york city')" class="city-btn w-full text-left px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm font-semibold transition-all">New York City</button>
+                        <button id="btn-washington" onclick="setVal('washington')" class="city-btn w-full text-left px-4 py-3 rounded-xl border border-slate-200 bg-white text-sm font-semibold transition-all">Washington</button>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400 mb-4">2. Temporal Filters</h3>
+                    <div class="space-y-3">
+                        <select id="month-in" class="w-full bg-white border border-slate-200 rounded-xl p-3 text-sm font-medium outline-none">
+                            <option value="all">All Months</option>
+                            <option value="january">January</option><option value="february">February</option>
+                            <option value="march">March</option><option value="april">April</option>
+                            <option value="may">May</option><option value="june">June</option>
+                        </select>
+                        <select id="day-in" class="w-full bg-white border border-slate-200 rounded-xl p-3 text-sm font-medium outline-none">
+                            <option value="all">Every Day</option>
+                            <option value="monday">Monday</option><option value="tuesday">Tuesday</option>
+                            <option value="wednesday">Wednesday</option><option value="thursday">Thursday</option>
+                            <option value="friday">Friday</option><option value="saturday">Saturday</option>
+                            <option value="sunday">Sunday</option>
+                        </select>
+                    </div>
+                </section>
+
+                <button id="run-btn" class="mt-4 lg:mt-auto w-full bg-slate-900 hover:bg-black text-white font-bold py-4 rounded-xl shadow-lg transition-all flex items-center justify-center gap-3">
+                    <i data-lucide="play" class="w-4 h-4 fill-current"></i> Run Analysis
+                </button>
+            </aside>
+
+            <main class="lg:col-span-8 terminal-container">
+                <div class="terminal-header">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-amber"></div>
+                    <div class="dot dot-green"></div>
+                    <span class="ml-2 text-[9px] font-bold text-slate-500 uppercase tracking-widest">Python Console</span>
+                </div>
+
+                <div id="terminal-loader">
+                    <span class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">Initialising Environment</span>
+                    <div class="loader-bar-container">
+                        <div class="loader-bar-fill"></div>
+                    </div>
+                </div>
+
+                <py-terminal id="my-terminal"></py-terminal>
+            </main>
+        </div>
+    </main>
+
+    <footer class="py-12 bg-white border-t border-slate-100 text-center">
+        <p class="text-[10px] font-black text-slate-400 tracking-[0.4em] uppercase">© 2026 YOUSSEF SEDRAK | BIKESHARE PROJECT</p>
+    </footer>
+
+    <py-script terminal="my-terminal" target="my-terminal">
+from js import document, window
+import bikeshare_project as bp 
+import asyncio
+from pyodide.ffi import create_proxy
+
+current_city = "chicago"
+
+def set_city_py(city, *args):
+    global current_city
+    target_id = f"btn-{city.replace(' ', '-')}"
+    for btn in document.querySelectorAll(".city-btn"):
+        btn.classList.remove("active")
+    active_btn = document.getElementById(target_id)
+    if active_btn:
+        active_btn.classList.add("active")
+    current_city = city
+    print(f"> Target city: {city.title()}")
+
+async def handle_run(event):
+    term_pre = document.querySelector("#my-terminal pre")
+    if term_pre:
+        term_pre.innerHTML = ""
+    
+    month = document.getElementById("month-in").value
+    day = document.getElementById("day-in").value
+    
+    print("—"*30)
+    print(f"ANALYSING: {current_city.upper()}")
+    print(f"FILTERS: {month.title()}, {day.title()}")
+    print("—"*30)
+    
+    try:
+        df = bp.load_data(current_city, month, day)
+        bp.time_stats(df)
+        bp.station_stats(df)
+        bp.trip_duration_stats(df)
+        bp.user_stats(df)
+        print("\n" + "—"*30)
+        print("[✔] Done.")
+    except Exception as e:
+        print(f"\n[!] Error: {e}")
+
+window.setVal = set_city_py
+document.getElementById("run-btn").onclick = create_proxy(handle_run)
+
+loader = document.getElementById("terminal-loader")
+if loader:
+    loader.style.opacity = "0"
+    async def finish_loading():
+        await asyncio.sleep(0.5)
+        loader.style.display = "none"
+        print("Ready.")
+    asyncio.ensure_future(finish_loading())
+    </py-script>
+
+    <script>
+        lucide.createIcons();
+        function setVal(val) {
+            if (window.setVal) window.setVal(val);
+        }
+    </script>
+</body>
+</html>
