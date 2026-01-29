@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en-GB" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Youssef Sedrak | Data Analyst</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    /* Custom scrollbar for the PDF area to keep it tidy */
+    #pdf-render-container::-webkit-scrollbar { width: 4px; }
+    #pdf-render-container::-webkit-scrollbar-track { background: #f1f1f1; }
+    #pdf-render-container::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+</style>
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+<header id="nav" class="fixed top-0 w-full z-50 transition-all duration-300 py-6">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-slate-900 text-white flex items-center justify-center font-bold rounded shadow-sm">YS</div>
+            <span class="font-bold tracking-tight text-slate-900">Youssef Sedrak</span>
+        </div>
+        <nav class="hidden md:flex gap-8 text-sm font-semibold text-slate-600">
+            <a href="#experience" class="hover:text-blue-600 transition-colors">Experience</a>
+            <a href="#passport-talent" class="hover:text-blue-600 transition-colors">Passport Talent</a>
+            <a href="#projects" class="hover:text-blue-600 transition-colors">Projects</a>
+            <a href="#certifications" class="hover:text-blue-600 transition-colors">Certifications</a>
+            <a href="#skills" class="hover:text-blue-600 transition-colors">Skills</a>
+        </nav>
+        <a href="mailto:Youssef.Sedrak@outlook.com" class="text-sm font-bold border-b-2 border-slate-900 pb-1 hover:text-blue-600 hover:border-blue-600 transition-all">Contact</a>
+    </div>
+</header>
+
+<section class="min-h-screen flex items-center pt-20">
+    <div class="max-w-6xl mx-auto px-6 w-full grid md:grid-cols-2 gap-12 items-center">
+        <div>
+            <h1 class="text-7xl font-extrabold tracking-tighter leading-none mb-6 text-slate-900">
+                Data Analyst.
+            </h1>
+            <p class="text-lg text-slate-600 mb-8 max-w-md leading-relaxed">
+                Specialising in Data Modelling and Exploratory Analysis. Focused on leveraging technical expertise in SQL and Python to deliver high-impact business insights and operational improvements.
+            </p>
+            <div class="flex gap-4">
+                <a href="https://linkedin.com/in/youssefsedrak" target="_blank" 
+                    class="w-12 h-12 flex items-center justify-center bg-white border border-slate-200 rounded-full hover:bg-slate-50 transition-colors shadow-sm" title="LinkedIn">
+                    <i data-lucide="linkedin" class="w-5 h-5 text-slate-600"></i>
+                </a>
+                
+                <a href="https://github.com/YoussefSedrak" target="_blank" 
+                    class="w-12 h-12 flex items-center justify-center bg-white border border-slate-200 rounded-full hover:bg-slate-50 transition-colors shadow-sm" title="GitHub">
+                    <i data-lucide="github" class="w-5 h-5 text-slate-600"></i>
+                </a>
+
+                <a href="https://kaggle.com/youssefsedrak" target="_blank" 
+                    class="w-12 h-12 flex items-center justify-center bg-white border border-slate-200 rounded-full hover:bg-slate-50 transition-colors shadow-sm" title="Kaggle">
+                    <i class="fa-brands fa-kaggle text-lg text-slate-600"></i>
+                </a>
+
+                <a href="assets/Youssef_Sedrak_Resume.pdf" target="_blank" 
+                class="h-12 px-5 flex items-center justify-center bg-white border border-slate-200 rounded-xl hover:bg-slate-50 transition-colors shadow-sm gap-2" 
+                title="View Resume">
+                    <i data-lucide="file-user" class="w-5 h-5 text-slate-600"></i>
+                    <span class="text-slate-700 text-sm font-medium">View Resume</span>
+                </a>
+            </div>
+        </div>
+        <div class="relative">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1000&auto=format&fit=crop" class="rounded-2xl shadow-xl border border-slate-200" alt="Professional Analytics Workspace">
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="py-24 bg-white border-y border-slate-100">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-sm font-black text-blue-600 uppercase tracking-[0.2em] mb-12">Professional Experience</h2>
+        <div class="space-y-16">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-slate-400 font-mono text-xs pt-1 uppercase">Aug 2024 — Aug 2024</div>
+                <div class="md:col-span-3">
+                    <h3 class="text-2xl font-bold text-slate-900">National Bank of Egypt (NBE)</h3>
+                    <p class="text-blue-600 font-bold text-sm mb-6 uppercase tracking-wide">Bank Intern</p>
+                    <ul class="space-y-4 text-slate-600 leading-relaxed">
+                        <li class="flex gap-3"><span class="text-blue-500 font-bold">•</span> Led an independent project on customer satisfaction, proposing strategies to enhance client experience and operational efficiency.</li>
+                        <li class="flex gap-3"><span class="text-blue-500 font-bold">•</span> Analysed employee-customer interactions, identifying challenges like extended wait times and client relation impacts.</li>
+                        <li class="flex gap-3"><span class="text-blue-500 font-bold">•</span> Observed high-volume retail banking operations, workflows, and real-time conflict resolution.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-4 gap-8 pt-8 border-t border-slate-50">
+                <div class="text-slate-400 font-mono text-xs pt-1 uppercase">July 2024 — July 2024</div>
+                <div class="md:col-span-3">
+                    <h3 class="text-2xl font-bold text-slate-900">Commercial International Bank (CIB)</h3>
+                    <p class="text-blue-600 font-bold text-sm mb-6 uppercase tracking-wide">Professional Intern</p>
+                    <ul class="space-y-4 text-slate-600 leading-relaxed">
+                        <li class="flex gap-3"><span class="text-blue-500 font-bold">•</span> Gained exposure to Digital Transformation, Data & Financial Literacy, and Human-Centric Interpersonal Skills through specialised bootcamps.</li>
+                        <li class="flex gap-3"><span class="text-blue-500 font-bold">•</span> Acquired insights into FinTech trends and retail banking fundamentals.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="passport-talent" class="py-20 bg-slate-100">
+    <div class="max-w-6xl mx-auto px-6">
+        <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm relative">
+            <div class="p-8 md:p-12 border-b border-slate-100">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-6 w-fit">
+                    <i data-lucide="award" class="w-3 h-3 text-blue-600"></i>
+                    <span class="text-[10px] font-bold text-blue-700 uppercase tracking-wider">Red Bull Wingfinder</span>
+                </div>
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">Talent Passport</h2>
+                <p class="text-slate-600 text-sm max-w-2xl">An analysis of my core strengths and professional personality, validated by Red Bull’s psychometric assessment.</p>
+            </div>
+            <div class="relative group">
+                <div id="pdf-render-container" class="bg-slate-200 p-4 md:p-8 max-h-[650px] overflow-y-auto flex flex-col items-center gap-6">
+                    <div id="pdf-status" class="flex flex-col items-center gap-3 py-24 text-slate-400">
+                        <div class="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
+                        <span class="font-mono text-[10px] uppercase tracking-widest">Rendering Documentation...</span>
+                    </div>
+                </div>
+            </div>
+            <div class="p-6 bg-slate-50 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Authenticated Psychometric Render</span>
+                <a href="https://www.wingfinder.com/result/share/_e_SRq85lf1RY2WcgN4SZ?lang=en" target="_blank" class="text-[10px] font-bold text-blue-600 hover:text-blue-800 uppercase tracking-widest flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-lg border border-blue-100 transition-all">View Talent Passport on Red Bull<i data-lucide="external-link" class="w-3 h-3"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="py-24 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-sm font-black text-blue-600 uppercase tracking-[0.2em] mb-12 text-center md:text-left">Projects</h2>
+        <div class="flex flex-col gap-8">
+            <div class="group flex flex-col md:flex-row bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow md:h-72">
+                <div class="md:w-1/3 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1510017803434-a899398421b3?auto=format&fit=crop&q=80&w=600" class="h-48 md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Bellabeat">
+                </div>
+                <div class="md:w-2/3 p-6 md:p-8 pb-20 md:pb-8 relative flex flex-col justify-center">
+                    <span class="text-[10px] font-bold text-blue-500 uppercase tracking-tight mb-1">Dec 2025 – Dec 2025</span>
+                    <h4 class="font-bold text-xl mb-2 leading-tight">Bellabeat – Google Professional Certificate</h4>
+                    <ul class="text-slate-600 text-sm leading-snug list-disc ml-4 space-y-1 mb-4">
+                        <li>Performed a comprehensive analysis of smart device data to identify user activity patterns.</li>
+                        <li>Executed extensive data cleaning and merging processes to resolve integrity issues.</li>
+                        <li>Formulated data-driven strategic recommendations to enhance user engagement.</li>
+                    </ul>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded uppercase">Python</span>
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded uppercase">Data Visualization</span>
+                    </div>
+                    <div class="absolute bottom-4 right-4 flex gap-2">
+                        <a href="google_certificate_project.html" class="h-10 px-4 bg-slate-900 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-all shadow-md">
+                            <span class="text-[10px] font-bold uppercase tracking-wider">View Notebook</span>
+                        </a>
+                        <a href="https://www.kaggle.com/code/youssefsedrak/bellabeat-fitbit-data-google-da-p-certificate" target="_blank" class="w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors shadow-md">
+                            <i class="fa-brands fa-kaggle text-base"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="group flex flex-col md:flex-row-reverse bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow md:h-72">
+                <div class="md:w-1/3 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=600" class="h-48 md:h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" alt="AiRcruit">
+                </div>
+                <div class="md:w-2/3 p-6 md:p-8 pb-20 md:pb-8 relative flex flex-col justify-center">
+                    <span class="text-[10px] font-bold text-blue-500 uppercase tracking-tight mb-1">Feb 2025 – Jun 2025</span>
+                    <h4 class="font-bold text-xl mb-2 leading-tight">AiRcruit – Graduation Project</h4>
+                    <ul class="text-slate-600 text-sm leading-snug list-disc ml-4 space-y-1 mb-4">
+                        <li>Coded and managed the backend system, linking user inputs to a central database.</li>
+                        <li>Collaborated with frontend team to develop dynamic, customized user interfaces.</li>
+                        <li>Utilized iterative development.</li>
+                    </ul>
+                    <div class="flex gap-2 flex-wrap">
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded uppercase">Python</span>
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded uppercase">Backend</span>
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded uppercase">Database</span>
+                    </div>
+                    <div class="absolute bottom-4 right-4 flex gap-2">
+                        <a href="grad_proj_preview.html" class="h-10 px-4 bg-slate-900 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-all shadow-md">
+                            <span class="text-[10px] font-bold uppercase tracking-wider">View Page Demo</span>
+                        </a>
+                        <a href="https://github.com/YoussefSedrak/GraduationProject_AiRcruit" target="_blank" class="w-10 h-10 bg-slate-900 text-white rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors shadow-md">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-12 bg-slate-50 border-t border-slate-200 text-center">
+    <p class="text-[10px] font-black text-slate-400 tracking-[0.4em] uppercase">© 2026 YOUSSEF SEDRAK | PORTFOLIO</p>
+</footer>
+
+<script>
+lucide.createIcons();
+
+window.addEventListener('scroll', () => {
+    const nav = document.getElementById('nav');
+    if (!nav) return;
+    if (window.scrollY > 50) {
+        nav.classList.add('bg-white/95','backdrop-blur-sm','border-b','border-slate-100','py-4');
+    } else {
+        nav.classList.remove('bg-white/95','backdrop-blur-sm','border-b','border-slate-100','py-4');
+    }
+});
+
+let pdfInstance = null;
+const renderScale = 2.0; // Fixed scale for display
+
+async function renderAllPages() {
+    if (!pdfInstance) return;
+    const container = document.getElementById('pdf-render-container');
+    if (!container) return;
+    container.innerHTML = '';
+
+    for (let i = 1; i <= pdfInstance.numPages; i++) {
+        const page = await pdfInstance.getPage(i);
+        const viewport = page.getViewport({ scale: renderScale });
+
+        const wrapper = document.createElement('div');
+        wrapper.className =
+            'pdf-page-wrapper shadow-xl bg-white rounded border border-slate-300 w-full max-w-[800px] overflow-hidden';
+
+        const canvas = document.createElement('canvas');
+        canvas.width = viewport.width;
+        canvas.height = viewport.height;
+        canvas.className = 'w-full h-auto block';
+
+        wrapper.appendChild(canvas);
+        container.appendChild(wrapper);
+
+        await page.render({
+            canvasContext: canvas.getContext('2d'),
+            viewport
+        }).promise;
+    }
+}
+
+async function renderPDF() {
+    const pdfUrl = 'assets/talent_passport.pdf';
+    const container = document.getElementById('pdf-render-container');
+    const status = document.getElementById('pdf-status');
+    if (!container) return;
+
+    const pdfjsLib = window['pdfjs-dist/build/pdf'];
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+        'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    try {
+        pdfInstance = await pdfjsLib.getDocument(pdfUrl).promise;
+        renderAllPages();
+    } catch (err) {
+        if (status) {
+            status.innerHTML =
+                `<span class="text-red-500 text-xs font-bold p-4 bg-red-50 rounded">
+                    Error: Documentation not found at ${pdfUrl}
+                </span>`;
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', renderPDF);
+</script>
+
+</body>
+</html>

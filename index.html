@@ -12,6 +12,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; }
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body class="bg-slate-50 text-slate-900">
 
@@ -96,6 +97,47 @@
                             <li class="flex gap-3"><span class="text-blue-500 font-bold">•</span> Acquired insights into FinTech trends and retail banking fundamentals.</li>
                         </ul>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="passport-talent" class="py-20 bg-slate-100">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-sm relative">
+                <div class="p-8 md:p-12 border-b border-slate-100">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 border border-blue-100 mb-6 w-fit">
+                        <i data-lucide="award" class="w-3 h-3 text-blue-600"></i>
+                        <span class="text-[10px] font-bold text-blue-700 uppercase tracking-wider">Red Bull Wingfinder</span>
+                    </div>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mb-4 tracking-tight">Talent Passport</h2>
+                    <p class="text-slate-600 text-sm max-w-2xl">
+                        An analysis of my core strengths and professional personality conducted by <b>Red Bull Wingfinder</b>.
+                    </p>
+                </div>
+                <div class="flex justify-center gap-4 mb-6">
+                    <button id="zoom-out" class="p-2 bg-white border border-slate-300 rounded hover:bg-slate-50 transition-colors shadow-sm">
+                        <i data-lucide="zoom-out" class="w-5 h-5 text-slate-600"></i>
+                    </button>
+                    <span id="zoom-level" class="flex items-center text-sm font-mono font-bold text-slate-700">100%</span>
+                    <button id="zoom-in" class="p-2 bg-white border border-slate-300 rounded hover:bg-slate-50 transition-colors shadow-sm">
+                        <i data-lucide="zoom-in" class="w-5 h-5 text-slate-600"></i>
+                    </button>
+                </div>
+                <div class="relative bg-slate-200">
+                    <div id="pdf-render-container" class="w-full max-h-[700px] overflow-x-auto">
+                        <div id="pdf-loader" class="flex flex-col items-center justify-center py-20">
+                            <div class="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mb-4"></div>
+                            <p class="text-xs font-bold tracking-widest text-slate-400 uppercase">Rendering Documentation...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="p-6 bg-slate-50 border-t border-slate-100 flex flex-col sm:flex-row justify-between items-center gap-4">
+                    <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Authenticated Psychometric Render</span>
+                    <a href="https://www.wingfinder.com/result/share/_e_SRq85lf1RY2WcgN4SZ?lang=en" target="_blank" class="text-[10px] font-bold text-blue-600 hover:text-blue-800 uppercase tracking-widest flex items-center gap-2 bg-blue-50 px-4 py-2 rounded-lg border border-blue-100 transition-all">
+                        View Talent Passport on Red Bull <i data-lucide="external-link" class="w-3 h-3"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -352,10 +394,104 @@
     </footer>
 
     <script>
-        lucide.createIcons();
-        window.addEventListener('scroll', () => {
+        const pdfjsLib = window['pdfjs-dist/build/pdf'];
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        let pdfInstance = null;
+        let renderScale = 1.5;
+        const ZOOM_STEP = 0.25;
+        const MIN_SCALE = 0.5;
+        const MAX_SCALE = 3.0;
+
+        async function renderAllPages() {
+            if (!pdfInstance) return;
+            const container = document.getElementById('pdf-render-container');
+            const loader = document.getElementById('pdf-loader');
+            if (!container) return;
+
+            const fragment = document.createDocumentFragment();
+
+            for (let i = 1; i <= pdfInstance.numPages; i++) {
+                const page = await pdfInstance.getPage(i);
+                const viewport = page.getViewport({ scale: renderScale });
+
+                const wrapper = document.createElement('div');
+                wrapper.className = 'pdf-page-wrapper shadow-lg bg-white mx-auto border border-slate-300 mb-8';
+                wrapper.style.width = 'fit-content';
+
+                const canvas = document.createElement('canvas');
+                canvas.width = viewport.width;
+                canvas.height = viewport.height;
+                canvas.className = 'block h-auto';
+
+                wrapper.appendChild(canvas);
+                fragment.appendChild(wrapper);
+
+                await page.render({
+                    canvasContext: canvas.getContext('2d'),
+                    viewport: viewport
+                }).promise;
+            }
+
+            container.innerHTML = ''; 
+            container.appendChild(fragment);
+        }
+
+        async function renderPDF() {
+            const pdfUrl = 'assets/talent_passport.pdf';
+            const status = document.getElementById('pdf-status');
+
+            try {
+                pdfInstance = await pdfjsLib.getDocument(pdfUrl).promise;
+                await renderAllPages();
+            } catch (err) {
+                console.error("PDF Render Error:", err);
+                if (status) {
+                    status.innerHTML = `<span class="text-red-500 text-xs font-bold">Error loading PDF. Please check the file path.</span>`;
+                }
+            }
+        }
+
+        function handleHeaderScroll() {
             const nav = document.getElementById('nav');
-            window.scrollY > 50 ? nav.classList.add('bg-white/95', 'backdrop-blur-sm', 'border-b', 'border-slate-100', 'py-4') : nav.classList.remove('bg-white/95', 'backdrop-blur-sm', 'border-b', 'border-slate-100', 'py-4');
+            if (!nav) return;
+
+            if (window.scrollY > 20) {
+                nav.classList.add('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.remove('bg-white/80', 'backdrop-blur-md', 'shadow-sm', 'py-4');
+                nav.classList.add('py-6');
+            }
+        }
+
+        function updateZoom(delta) {
+            const newScale = renderScale + delta;
+            if (newScale >= MIN_SCALE && newScale <= MAX_SCALE) {
+                renderScale = newScale;
+                
+                const zoomLevelEl = document.getElementById('zoom-level');
+                if (zoomLevelEl) {
+                    const percentage = Math.round((renderScale / 1.5) * 100);
+                    zoomLevelEl.innerText = `${percentage}%`;
+                }
+                
+                renderAllPages();
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            
+            renderPDF();
+
+            window.addEventListener('scroll', handleHeaderScroll);
+
+            const btnIn = document.getElementById('zoom-in');
+            const btnOut = document.getElementById('zoom-out');
+
+            if (btnIn) btnIn.addEventListener('click', () => updateZoom(ZOOM_STEP));
+            if (btnOut) btnOut.addEventListener('click', () => updateZoom(-ZOOM_STEP));
         });
     </script>
 </body>
