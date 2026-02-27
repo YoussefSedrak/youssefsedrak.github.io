@@ -292,7 +292,7 @@
     </section>
 
     <section id="projects" class="py-24 bg-slate-50">
-        <div class="max-w-5xl mx-auto px-6">
+        <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-sm font-black text-blue-600 uppercase tracking-[0.2em] mb-12 text-center md:text-left">Projects</h2>
             <div class="flex flex-col gap-8">
                 <div class="group flex flex-col md:flex-row bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow md:h-72">
@@ -398,7 +398,7 @@
     </section>
 
     <section id="certifications" class="py-24 bg-white border-y border-slate-100">
-    	<div class="max-w-6xl mx-auto px-6">
+        <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-sm font-black text-blue-600 uppercase tracking-[0.2em] mb-12">Professional Certifications</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
@@ -410,10 +410,43 @@
                         </div>
                         <h4 class="font-bold text-slate-900 leading-tight">Advanced Statistics for Data Science</h4>
                         <p class="text-xs text-slate-500 mt-2">Present</p>
+
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-6 mb-2">Skills I will gain</h5>
+                        <div id="skills-container-8" class="relative overflow-hidden max-h-20 transition-all duration-500 ease-in-out">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Applied Mathematics</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Bayesian Statistics</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Biostatistics</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Analysis</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Modeling</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Science</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Linear Algebra</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Mathematical Modeling</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Probability</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Probability & Statistics</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Probability Distribution</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Regression Analysis</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Sampling (Statistics)</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Statistical Analysis</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Statistical Inference</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Statistical Methods</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Statistical Modeling</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Statistical Hypothesis Testing</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Statistics</span>
+                            </div>
+                            <div id="skills-fade-8" class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-slate-50 to-transparent transition-opacity"></div>
+                        </div>
+                        <button onclick="toggleSkills('8')" id="skills-btn-8" class="mt-2 text-[10px] font-black text-blue-600 uppercase tracking-tighter hover:text-blue-800 transition-colors">
+                            + Show All Skills
+                        </button>
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-4 mb-2">Tools I will learn</h5>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">R Programming</span>
+                        </div>
                     </div>
-                    <a href="" class="pointer-events-none select-none mt-6 text-xs font-bold text-slate-400 flex items-center gap-1 uppercase tracking-wider">
-                        In Progress <i data-lucide="external-link" class="w-3 h-3"></i>
-                    </a>
+                    <span class="mt-8 px-4 py-2 bg-slate-100 border border-slate-200 rounded-lg text-center text-xs font-bold text-slate-400 uppercase tracking-wider cursor-default select-none">
+                        In Progress
+                    </span>
                 </div>
 
                 <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 hover:border-blue-300 transition-colors flex flex-col justify-between">
@@ -424,8 +457,39 @@
                         </div>
                         <h4 class="font-bold text-slate-900 leading-tight">Mathematics for Machine Learning</h4>
                         <p class="text-xs text-slate-500 mt-2">Issued Feb 2026</p>
+
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-6 mb-2">Skills gained</h5>
+                        <div id="skills-container-7" class="relative overflow-hidden max-h-20 transition-all duration-500 ease-in-out">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Advanced Mathematics</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Algorithms</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Applied Mathematics</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Artificial Neural Networks</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Calculus</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Preprocessing</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Derivatives</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Dimensionality Reduction</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Feature Engineering</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Linear Algebra</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Machine Learning Algorithms</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Mathematical Modeling</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Regression Analysis</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Statistics</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Unsupervised Learning</span>
+                            </div>
+                            <div id="skills-fade-7" class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-slate-50 to-transparent transition-opacity"></div>
+                        </div>
+                        <button onclick="toggleSkills('7')" id="skills-btn-7" class="mt-2 text-[10px] font-black text-blue-600 uppercase tracking-tighter hover:text-blue-800 transition-colors">
+                            + Show All Skills
+                        </button>
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-4 mb-2">Tools Learnt</h5>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Jupyter</span>
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">NumPy</span>
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Python Programming</span>
+                        </div>
                     </div>
-                    <a href="https://www.coursera.org/verify/specialization/EAF3OLOM592K" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 uppercase tracking-wider">
+                    <a href="https://www.coursera.org/verify/specialization/EAF3OLOM592K" target="_blank" class="mt-8 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-center text-xs font-bold flex items-center justify-center gap-2 uppercase tracking-wider transition-all shadow-sm">
                         View Credential <i data-lucide="external-link" class="w-3 h-3"></i>
                     </a>
                 </div>
@@ -438,8 +502,43 @@
                         </div>
                         <h4 class="font-bold text-slate-900 leading-tight">Data Analytics Professional Certificate</h4>
                         <p class="text-xs text-slate-500 mt-2">Issued Dec 2025</p>
+                        
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-6 mb-2">Skills gained</h5>
+                        <div id="skills-container-6" class="relative overflow-hidden max-h-20 transition-all duration-500 ease-in-out">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Analysis</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Cleansing</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Ethics</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Literacy</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Presentation</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Storytelling</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Structures</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Validation</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Interviewing Skills</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Object Oriented Programming (OOP)</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Presentations</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Sampling (Statistics)</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Spreadsheet Software</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Tableau Software</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Visualization</span>
+                            </div>
+                            <div id="skills-fade-6" class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-slate-50 to-transparent transition-opacity"></div>
+                        </div>
+                        <button onclick="toggleSkills('6')" id="skills-btn-6" class="mt-2 text-[10px] font-black text-blue-600 uppercase tracking-tighter hover:text-blue-800 transition-colors">
+                            + Show All Skills
+                        </button>
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-4 mb-2">Tools Learnt</h5>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Applicant Tracking Systems</span>
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Ggplot2</span>
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">LinkedIn</span>
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">R (Software)</span>
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Rmarkdown</span>
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Python Programming</span>
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">SQL</span>
+                        </div>
                     </div>
-                    <a href="https://coursera.org/verify/professional-cert/R0WBP1M5AKQ6" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 uppercase tracking-wider">
+                    <a href="https://coursera.org/verify/professional-cert/R0WBP1M5AKQ6" target="_blank" class="mt-8 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-center text-xs font-bold flex items-center justify-center gap-2 uppercase tracking-wider transition-all shadow-sm">
                         View Credential <i data-lucide="external-link" class="w-3 h-3"></i>
                     </a>
                 </div>
@@ -452,8 +551,31 @@
                         </div>
                         <h4 class="font-bold text-slate-900 leading-tight">Basics of Cost Accounting: Product Costing</h4>
                         <p class="text-xs text-slate-500 mt-2">Issued Nov 2023</p>
+                        
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-6 mb-2">Skills gained</h5>
+                        <div id="skills-container-5" class="relative overflow-hidden max-h-20 transition-all duration-500 ease-in-out">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Cost Accounting</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Product Costing</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Financial Analysis</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Resource Allocation</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Cost Management</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Management Accounting</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Product Planning</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Financial Accounting</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Operating Expense</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Cost Accounting</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Accounting</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Depreciation</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Production Process</span>
+                            </div>
+                            <div id="skills-fade-5" class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-slate-50 to-transparent transition-opacity"></div>
+                        </div>
+                        <button onclick="toggleSkills('5')" id="skills-btn-5" class="mt-2 text-[10px] font-black text-blue-600 uppercase tracking-tighter hover:text-blue-800 transition-colors">
+                            + Show All Skills
+                        </button>
                     </div>
-                    <a href="https://www.coursera.org/verify/TMTNR4WAL2RG" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 uppercase tracking-wider">
+                    <a href="https://www.coursera.org/verify/TMTNR4WAL2RG" target="_blank" class="mt-8 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-center text-xs font-bold flex items-center justify-center gap-2 uppercase tracking-wider transition-all shadow-sm">
                         View Credential <i data-lucide="external-link" class="w-3 h-3"></i>
                     </a>
                 </div>
@@ -466,8 +588,31 @@
                         </div>
                         <h4 class="font-bold text-slate-900 leading-tight">Work Smarter with Microsoft Excel</h4>
                         <p class="text-xs text-slate-500 mt-2">Issued Oct 2023</p>
+
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-6 mb-2">Skills gained</h5>
+                        <div id="skills-container-4" class="relative overflow-hidden max-h-20 transition-all duration-500 ease-in-out">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Management</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Microsoft Office</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Spreadsheet Software</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Microsoft 365</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Visualization</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Microsoft Excel</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Excel Formulas</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Productivity Software</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Import/Export</span>
+                            </div>
+                            <div id="skills-fade-4" class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-slate-50 to-transparent transition-opacity"></div>
+                        </div>
+                        <button onclick="toggleSkills('4')" id="skills-btn-4" class="mt-2 text-[10px] font-black text-blue-600 uppercase tracking-tighter hover:text-blue-800 transition-colors">
+                            + Show All Skills
+                        </button>
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-4 mb-2">Tools Learnt</h5>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Microsoft Excel</span>
+                        </div>
                     </div>
-                    <a href="https://coursera.org/verify/WRH5YEDJVXQ5" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 uppercase tracking-wider">
+                    <a href="https://coursera.org/verify/WRH5YEDJVXQ5" target="_blank" class="mt-8 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-center text-xs font-bold flex items-center justify-center gap-2 uppercase tracking-wider transition-all shadow-sm">
                         View Credential <i data-lucide="external-link" class="w-3 h-3"></i>
                     </a>
                 </div>
@@ -478,10 +623,28 @@
                             <div class="p-2 bg-blue-100 rounded-lg"><i data-lucide="database" class="w-5 h-5 text-blue-600"></i></div>
                             <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">UC San Diego</span>
                         </div>
-                        <h4 class="font-bold text-slate-900 leading-tight">Big Data Modelling and Management Systems</h4>
+                        <h4 class="font-bold text-slate-900 leading-tight">Big Data Modelling</h4>
                         <p class="text-xs text-slate-500 mt-2">Issued Oct 2023</p>
+
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-6 mb-2">Skills gained</h5>
+                        <div id="skills-container-3" class="relative overflow-hidden max-h-20 transition-all duration-500 ease-in-out">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Big Data</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Scalability</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Distributed Computing</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Unstructured Data</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Apache Hadoop</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Processing</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Science</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Analysis</span>
+                            </div>
+                            <div id="skills-fade-3" class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-slate-50 to-transparent transition-opacity"></div>
+                        </div>
+                        <button onclick="toggleSkills('3')" id="skills-btn-3" class="mt-2 text-[10px] font-black text-blue-600 uppercase tracking-tighter hover:text-blue-800 transition-colors">
+                            + Show All Skills
+                        </button>
                     </div>
-                    <a href="https://www.coursera.org/verify/SFW5QUTESE9Z" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 uppercase tracking-wider">
+                    <a href="https://www.coursera.org/verify/SFW5QUTESE9Z" target="_blank" class="mt-8 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-center text-xs font-bold flex items-center justify-center gap-2 uppercase tracking-wider transition-all shadow-sm">
                         View Credential <i data-lucide="external-link" class="w-3 h-3"></i>
                     </a>
                 </div>
@@ -494,8 +657,26 @@
                         </div>
                         <h4 class="font-bold text-slate-900 leading-tight">Introduction to Big Data</h4>
                         <p class="text-xs text-slate-500 mt-2">Issued Sep 2023</p>
+
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-6 mb-2">Skills gained</h5>
+                        <div id="skills-container-2" class="relative overflow-hidden max-h-20 transition-all duration-500 ease-in-out">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Big Data</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Scalability</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Distributed Computing</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Unstructured Data</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Apache Hadoop</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Processing</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Science</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Analysis</span>  
+                            </div>
+                            <div id="skills-fade-2" class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-slate-50 to-transparent transition-opacity"></div>
+                        </div>
+                        <button onclick="toggleSkills('2')" id="skills-btn-2" class="mt-2 text-[10px] font-black text-blue-600 uppercase tracking-tighter hover:text-blue-800 transition-colors">
+                            + Show All Skills
+                        </button>
                     </div>
-                    <a href="https://www.coursera.org/verify/PMAVYHNK5JHU" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 uppercase tracking-wider">
+                    <a href="https://www.coursera.org/verify/PMAVYHNK5JHU" target="_blank" class="mt-8 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-center text-xs font-bold flex items-center justify-center gap-2 uppercase tracking-wider transition-all shadow-sm">
                         View Credential <i data-lucide="external-link" class="w-3 h-3"></i>
                     </a>
                 </div>
@@ -506,10 +687,45 @@
                             <div class="p-2 bg-blue-100 rounded-lg"><i data-lucide="line-chart" class="w-5 h-5 text-blue-600"></i></div>
                             <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Udacity</span>
                         </div>
-                        <h4 class="font-bold text-slate-900 leading-tight">Data Analysis Nanodegree Program | Professional Track</h4>
+                        <h4 class="font-bold text-slate-900 leading-tight">Data Analysis Nanodegree Program</h4>
                         <p class="text-xs text-slate-500 mt-2">Issued Dec 2022</p>
+
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-6 mb-2">Skills gained</h5>
+                        <div id="skills-container-1" class="relative overflow-hidden max-h-20 transition-all duration-500 ease-in-out">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Pandas</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Basic data visualizations</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Exploratory data analysis</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Jupyter notebooks</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data storytelling</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data analysis process</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">NumPy</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data manipulation</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data cleaning</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data storage</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data Tidiness Assessment</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data gathering</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data wrangling</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data quality assessment</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">File i/o</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Latent variables</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data fluency</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Professional presentations</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data limitations and biases</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Quantitative data visualization</span>
+                                <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">Data visualization design</span>
+                            </div>
+                            <div id="skills-fade-1" class="absolute bottom-0 left-0 w-full h-8 bg-gradient-to-t from-slate-50 to-transparent transition-opacity"></div>
+                        </div>
+                        <button onclick="toggleSkills('1')" id="skills-btn-1" class="mt-2 text-[10px] font-black text-blue-600 uppercase tracking-tighter hover:text-blue-800 transition-colors">
+                            + Show All Skills
+                        </button>
+                        <h5 class="text-[10px] font-black text-slate-700 uppercase tracking-wider mt-4 mb-2">Tools Learnt</h5>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-2 py-1 bg-white border border-slate-200 text-[10px] font-bold text-slate-600 rounded">R Programming</span>
+                        </div>
                     </div>
-                    <a href="https://www.udacity.com/certificate/CGALXXFK" class="mt-6 text-xs font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1 uppercase tracking-wider">
+                    <a href="https://www.udacity.com/certificate/CGALXXFK" target="_blank" class="mt-8 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-center text-xs font-bold flex items-center justify-center gap-2 uppercase tracking-wider transition-all shadow-sm">
                         View Credential <i data-lucide="external-link" class="w-3 h-3"></i>
                     </a>
                 </div>
@@ -522,19 +738,41 @@
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-sm font-black text-blue-400 uppercase tracking-[0.2em] mb-12">Technical Proficiencies</h2>
             <div class="grid md:grid-cols-2 gap-16">
-                <div class="grid grid-cols-2 gap-y-6">
-                    <div class="flex items-center gap-3"><i data-lucide="check-circle" class="text-blue-400 w-5 h-5"></i> Python</div>
-                    <div class="flex items-center gap-3"><i data-lucide="check-circle" class="text-blue-400 w-5 h-5"></i> SQL</div>
-                    <div class="flex items-center gap-3"><i data-lucide="check-circle" class="text-blue-400 w-5 h-5"></i> Power BI</div>
-                    <div class="flex items-center gap-3"><i data-lucide="check-circle" class="text-blue-400 w-5 h-5"></i> Excel</div>
-                    <div class="flex items-center gap-3"><i data-lucide="check-circle" class="text-blue-400 w-5 h-5"></i> Data Visualisation</div>
-                    <div class="flex items-center gap-3"><i data-lucide="check-circle" class="text-blue-400 w-5 h-5"></i> Exploratory Analysis</div>
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-blue-400 text-xs font-bold uppercase tracking-widest mb-4">Core Data Analysis</h3>
+                        <div class="grid grid-cols-1 gap-y-3">
+                            <div class="flex items-center gap-3"><i data-lucide="check-circle" class="text-blue-400 w-4 h-4"></i> Data Wrangling & Cleaning</div>
+                            <div class="flex items-center gap-3"><i data-lucide="check-circle" class="text-blue-400 w-4 h-4"></i> Exploratory Data Analysis</div>
+                            <div class="flex items-center gap-3"><i data-lucide="check-circle" class="text-blue-400 w-4 h-4"></i> Statistical Analysis & Inference</div>
+                            <div class="flex items-center gap-3"><i data-lucide="check-circle" class="text-blue-400 w-4 h-4"></i> Data Visualisation & Storytelling</div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-blue-400 text-xs font-bold uppercase tracking-widest mb-4">Tools & Technologies</h3>
+                        <div class="grid grid-cols-2 gap-y-3">
+                            <div class="flex items-center gap-3 text-sm"><i data-lucide="code" class="text-blue-400 w-4 h-4"></i> Python</div>
+                            <div class="flex items-center gap-3 text-sm"><i data-lucide="database" class="text-blue-400 w-4 h-4"></i> SQL</div>
+                            <div class="flex items-center gap-3 text-sm"><i data-lucide="bar-chart-3" class="text-blue-400 w-4 h-4"></i> Power BI / Tableau</div>
+                            <div class="flex items-center gap-3 text-sm"><i data-lucide="table" class="text-blue-400 w-4 h-4"></i> Excel (Advanced)</div>
+                            <div class="flex items-center gap-3 text-sm"><i data-lucide="terminal" class="text-blue-400 w-4 h-4"></i> R Programming</div>
+                            <div class="flex items-center gap-3 text-sm"><i data-lucide="box" class="text-blue-400 w-4 h-4"></i> Pandas / NumPy</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
-                    <h3 class="text-lg font-bold mb-4">Analytical Focus</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Highly skilled in data preparation and wrangling, with a strong emphasis on analytical reasoning and problem-solving to improve business performance.
-                    </p>
+                <div class="flex flex-col gap-6">
+                    <div class="bg-white/5 p-8 rounded-2xl border border-white/10">
+                        <h3 class="text-lg font-bold mb-4">Analytical Focus</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Highly skilled in data preparation and wrangling, with a strong emphasis on analytical reasoning and problem-solving to improve business performance.
+                        </p>
+                    </div>
+                    <div class="bg-blue-600/10 p-6 rounded-2xl border border-blue-600/20">
+                        <h4 class="text-sm font-bold text-blue-400 mb-2">Mathematical Foundation</h4>
+                        <p class="text-slate-300 text-xs leading-relaxed">
+                            Solid grounding in Linear Algebra & Calculus applied to Machine Learning Algorithms and Dimensionality Reduction.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -545,6 +783,30 @@
     </footer>
 
     <script>
+        /**
+         * Toggles the visibility of skill tags for certification cards
+         * @param {string} id - The unique identifier for the card container
+         */
+        function toggleSkills(id) {
+            const container = document.getElementById(`skills-container-${id}`);
+            const btn = document.getElementById(`skills-btn-${id}`);
+            const fade = document.getElementById(`skills-fade-${id}`);
+
+            if (container.classList.contains('max-h-20')) {
+                // Expand: remove max height limit and hide the fade overlay
+                container.classList.remove('max-h-20');
+                container.classList.add('max-h-[1000px]');
+                btn.innerText = '- Show Less';
+                fade.classList.add('opacity-0', 'pointer-events-none');
+            } else {
+                // Collapse: return to original height and show fade overlay
+                container.classList.add('max-h-20');
+                container.classList.remove('max-h-[1000px]');
+                btn.innerText = '+ Show All Skills';
+                fade.classList.remove('opacity-0', 'pointer-events-none');
+            }
+        }
+
         function handleHeaderScroll() {
             const nav = document.getElementById('nav');
             if (!nav) return;
@@ -579,8 +841,13 @@
         }
 
         document.addEventListener('DOMContentLoaded', () => {
+            // Initialize Lucide icons
             lucide.createIcons();
+            
+            // Initialize custom components
             initStrengthSlider();
+            
+            // Setup scroll listeners
             window.addEventListener('scroll', handleHeaderScroll);
         });
     </script>
