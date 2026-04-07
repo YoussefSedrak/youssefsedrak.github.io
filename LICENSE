@@ -1,7 +1,34 @@
+COPYRIGHT NOTICE
+
 Copyright (c) 2026 Youssef Sedrak. All rights reserved.
 
-This repository and all its contents, including but not limited to the code, design, 
-graphics, and text, are the exclusive property of Youssef Sedrak. 
+This repository and its original contents, including but not limited to the 
+HTML markup, CSS/Tailwind styling, and literary content, are the exclusive 
+property of Youssef Sedrak. 
 
-Unauthorized copying, modification, distribution, or any other use of this work 
-without express written permission is strictly prohibited.
+By viewing this public repository, you are granted the right to fork and 
+display this work locally for personal or educational review, as permitted 
+by the GitHub Terms of Service. However, unauthorized copying, modification, 
+redistribution, or commercial use of this work without express written 
+permission is strictly prohibited.
+
+---
+THIRD-PARTY ASSETS & LICENSING:
+
+This project utilizes external assets under their respective licenses:
+
+1. PHOTOGRAPHY:
+   Images sourced from Unsplash are used under the Unsplash License. 
+   Original ownership remains with the credited photographers as 
+   noted in the project interface.
+
+2. ICONOGRAPHY:
+   Iconography from Lucid (Lucid Software Inc.) is used for 
+   illustrative and data visualisation purposes. All rights to the 
+   original icon designs remain with Lucid.
+
+GENERAL PROVISIONS:
+- Use of these third-party assets in this project does not imply 
+  endorsement by the original creators or platforms.
+- Any permitted redistribution (forking) of this project must 
+  maintain all original attribution ribbons and asset credits.
